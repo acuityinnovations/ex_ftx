@@ -1,0 +1,41 @@
+[
+  {
+    "request": {
+      "body": "{\"clientId\":\"abcdef\",\"market\":\"BTC/USDT\",\"postOnly\":true,\"price\":62000,\"side\":\"sell\",\"size\":0.001,\"type\":\"limit\"}",
+      "headers": {
+        "Content-Type": "application/json",
+        "FTX-KEY": "***",
+        "FTX-SIGN": "***",
+        "FTX-TS": "1620316521645"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://ftx.com/api/orders"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"success\":false,\"error\":\"Not enough balances\"}\n",
+      "headers": {
+        "Date": "Thu, 06 May 2021 15:55:25 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "48",
+        "Connection": "keep-alive",
+        "Set-Cookie": "__cfduid=de13b9b729ab5858e9b2c217553cfc4821620316524; expires=Sat, 05-Jun-21 15:55:24 GMT; path=/; domain=.ftx.com; HttpOnly; SameSite=Lax; Secure",
+        "Cache-Control": "private, max-age=0, no-cache",
+        "account-id": "23840329",
+        "Vary": "Origin",
+        "CF-Cache-Status": "DYNAMIC",
+        "cf-request-id": "09e3fd29240000560755a81000000001",
+        "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "X-Content-Type-Options": "nosniff",
+        "Server": "cloudflare",
+        "CF-RAY": "64b364883c985607-SIN",
+        "alt-svc": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+      },
+      "status_code": 400,
+      "type": "ok"
+    }
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://ftx.com/api/futures/BTC-PERP"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"success\":true,\"result\":{\"name\":\"BTC-PERP\",\"underlying\":\"BTC\",\"description\":\"Bitcoin Perpetual Futures\",\"type\":\"perpetual\",\"expiry\":null,\"perpetual\":true,\"expired\":false,\"enabled\":true,\"postOnly\":false,\"priceIncrement\":1.0,\"sizeIncrement\":0.0001,\"last\":57387.0,\"bid\":57386.0,\"ask\":57387.0,\"index\":57295.304250815454,\"mark\":57389.0,\"imfFactor\":0.002,\"lowerBound\":54431.0,\"upperBound\":60260.0,\"underlyingDescription\":\"Bitcoin\",\"expiryDescription\":\"Perpetual\",\"moveStart\":null,\"marginPrice\":57389.0,\"positionLimitWeight\":1.0,\"group\":\"perpetual\",\"change1h\":-0.001878358870897612,\"change24h\":0.025023219261270272,\"changeBod\":-0.0026935909912414848,\"volumeUsd24h\":3317448537.2319,\"volume\":57880.9655}}\n",
+      "headers": {
+        "Date": "Thu, 06 May 2021 14:30:04 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Set-Cookie": "__cfduid=d20a975030fa363da3794e379c5aa27241620311404; expires=Sat, 05-Jun-21 14:30:04 GMT; path=/; domain=.ftx.com; HttpOnly; SameSite=Lax; Secure",
+        "Vary": "Accept-Encoding",
+        "Cache-Control": "public, max-age=0",
+        "ETag": "W/\"6de72964f8463987ddbb23c958edc278\"",
+        "CF-Cache-Status": "MISS",
+        "cf-request-id": "09e3af079700005688a9af2000000001",
+        "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "X-Content-Type-Options": "nosniff",
+        "Server": "cloudflare",
+        "CF-RAY": "64b2e785bbbf5688-SIN",
+        "alt-svc": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

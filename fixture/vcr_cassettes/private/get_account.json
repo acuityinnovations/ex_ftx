@@ -1,0 +1,42 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "FTX-KEY": "***",
+        "FTX-SIGN": "***",
+        "FTX-TS": "1620315605994"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://ftx.com/api/account"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"success\":true,\"result\":{\"username\":\"user@example.com\",\"collateral\":95.63124477219893,\"freeCollateral\":92.99648891092086,\"totalAccountValue\":95.63124477219893,\"totalPositionSize\":0.0,\"initialMarginRequirement\":0.1,\"maintenanceMarginRequirement\":0.03,\"marginFraction\":null,\"openMarginFraction\":null,\"liquidating\":false,\"backstopProvider\":false,\"positions\":[],\"takerFee\":0.0007,\"makerFee\":0.0002,\"leverage\":10.0,\"positionLimit\":null,\"positionLimitUsed\":null,\"useFttCollateral\":true,\"chargeInterestOnNegativeUsd\":false,\"spotMarginEnabled\":false,\"spotLendingEnabled\":false}}\n",
+      "headers": {
+        "Date": "Thu, 06 May 2021 15:40:06 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Set-Cookie": "__cfduid=d2f6779993622eeecba54b4d1fa1ca2a71620315606; expires=Sat, 05-Jun-21 15:40:06 GMT; path=/; domain=.ftx.com; HttpOnly; SameSite=Lax; Secure",
+        "Vary": "Accept-Encoding",
+        "Cache-Control": "private, max-age=0, no-cache",
+        "account-id": "23840329",
+        "ETag": "W/\"76ab1e6d267fb1c0b1182f85211ad3c0\"",
+        "CF-Cache-Status": "MISS",
+        "cf-request-id": "09e3ef25e2000019e98fa0e000000001",
+        "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "X-Content-Type-Options": "nosniff",
+        "Server": "cloudflare",
+        "CF-RAY": "64b34e1c9d1b19e9-SIN",
+        "alt-svc": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

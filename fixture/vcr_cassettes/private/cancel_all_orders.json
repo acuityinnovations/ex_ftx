@@ -1,0 +1,41 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "FTX-KEY": "***",
+        "FTX-SIGN": "***",
+        "FTX-TS": "1620320675713"
+      },
+      "method": "delete",
+      "options": [],
+      "request_body": "",
+      "url": "https://ftx.com/api/orders"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"success\":true,\"result\":\"Orders queued for cancellation\"}\n",
+      "headers": {
+        "Date": "Thu, 06 May 2021 17:04:36 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Set-Cookie": "__cfduid=d73da293856f4505c3654cd5b2c705f801620320676; expires=Sat, 05-Jun-21 17:04:36 GMT; path=/; domain=.ftx.com; HttpOnly; SameSite=Lax; Secure",
+        "Vary": "Accept-Encoding",
+        "Cache-Control": "private, max-age=0, no-cache",
+        "account-id": "23840329",
+        "CF-Cache-Status": "DYNAMIC",
+        "cf-request-id": "09e43c80f5000018ececa2b000000001",
+        "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "X-Content-Type-Options": "nosniff",
+        "Server": "cloudflare",
+        "CF-RAY": "64b3c9e18f4d18ec-SIN",
+        "alt-svc": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "request": {
+      "body": "{\"clientId\":\"abcdef\",\"market\":\"BTC/USDT\",\"postOnly\":true,\"price\":50000,\"side\":\"buy\",\"size\":0.001,\"type\":\"limit\"}",
+      "headers": {
+        "Content-Type": "application/json",
+        "FTX-KEY": "***",
+        "FTX-SIGN": "***",
+        "FTX-TS": "1620319516906"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://ftx.com/api/orders"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"success\":true,\"result\":{\"id\":45700000000,\"clientId\":\"abcdef\",\"market\":\"BTC/USDT\",\"type\":\"limit\",\"side\":\"buy\",\"price\":50000.0,\"size\":0.001,\"status\":\"new\",\"filledSize\":0.0,\"remainingSize\":0.001,\"reduceOnly\":false,\"liquidation\":null,\"avgFillPrice\":null,\"postOnly\":true,\"ioc\":false,\"createdAt\":\"2021-05-06T16:45:18.683095+00:00\",\"future\":null}}\n",
+      "headers": {
+        "Date": "Thu, 06 May 2021 16:45:18 GMT",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Set-Cookie": "__cfduid=dbff2c30750c4d6232ba84406a1aad14f1620319518; expires=Sat, 05-Jun-21 16:45:18 GMT; path=/; domain=.ftx.com; HttpOnly; SameSite=Lax; Secure",
+        "Vary": "Accept-Encoding",
+        "Cache-Control": "private, max-age=0, no-cache",
+        "account-id": "23840329",
+        "CF-Cache-Status": "DYNAMIC",
+        "cf-request-id": "09e42ad76b000017a330840000000001",
+        "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "X-Content-Type-Options": "nosniff",
+        "Server": "cloudflare",
+        "CF-RAY": "64b3ad9f1c8917a3-SIN",
+        "alt-svc": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
