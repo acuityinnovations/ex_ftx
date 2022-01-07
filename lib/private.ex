@@ -215,4 +215,137 @@ defmodule ExFtx.Private do
   def get_open_orders(instrument_id, config \\ nil) do
     get("#{@prefix}/orders?market=#{instrument_id}", %{}, config)
   end
+
+  @doc """
+  Get positions
+  iex> ExFtx.Private.get_positions(true, %{})
+  {:ok,
+  %{
+   "result" => [
+     %{
+       "collateralUsed" => 3.8353,
+       "cost" => -38.353,
+       "entryPrice" => 3835.3,
+       "estimatedLiquidationPrice" => 8927.227624003088,
+       "future" => "ETH-PERP",
+       "initialMarginRequirement" => 0.1,
+       "longOrderSize" => 0.0,
+       "maintenanceMarginRequirement" => 0.03,
+       "netSize" => -0.01,
+       "openSize" => 0.01,
+       "realizedPnl" => 7.0022609,
+       "shortOrderSize" => 0.0,
+       "side" => "sell",
+       "size" => 0.01,
+       "unrealizedPnl" => 0.0
+     }
+   ],
+   "success" => true
+  }}
+  """
+  def get_positions(showAvgPrice , config \\ nil) do
+    get("#{@prefix}/positions", %{showAvgPrice: showAvgPrice}, config)
+  end
+
+  @doc """
+  Get account balances
+  iex> ExFtx.Private.get_wallet_balances(%{})
+
+  {:ok,
+  %{
+   "result" => [
+     %{
+       "availableWithoutBorrow" => 3444.42163874,
+       "coin" => "USD",
+       "free" => 3444.42163874,
+       "spotBorrow" => 0.0,
+       "total" => 8184.61938589,
+       "usdValue" => 8184.619385891926
+     },
+     %{
+       "availableWithoutBorrow" => 0.0,
+       "coin" => "BTC",
+       "free" => 0.06518392,
+       "spotBorrow" => 0.04204707,
+       "total" => -0.04204707,
+       "usdValue" => -1969.3521939049492
+     },
+     %{
+       "availableWithoutBorrow" => 0.0,
+       "coin" => "SOL",
+       "free" => 16.49960717,
+       "spotBorrow" => 5.6194e-4,
+       "total" => -5.6194e-4,
+       "usdValue" => -0.0959789677588701
+     }
+   ],
+   "success" => true
+  }}
+  """
+  def get_wallet_balances(config \\ nil) do
+    get("#{@prefix}/wallet/balances", %{}, config)
+  end
+
+
+  @doc """
+  Get coins info on wallet
+  iex> ExFtx.Private.get_wallet_coins(%{})
+
+  {:ok,
+  %{
+   "result" => [
+     %{
+       "bep2Asset" => nil,
+       "canConvert" => true,
+       "canDeposit" => false,
+       "canWithdraw" => false,
+       "collateral" => true,
+       "collateralWeight" => 1.0,
+       "creditTo" => nil,
+       "erc20Contract" => nil,
+       "fiat" => true,
+       "hasTag" => false,
+       "hidden" => false,
+       "id" => "USD",
+       "indexPrice" => 1.0,
+       "isEtf" => false,
+       "isToken" => false,
+       "methods" => [],
+       "name" => "USD",
+       "nftQuoteCurrencyEligible" => true,
+       "splMint" => nil,
+       "spotMargin" => true,
+       "trc20Contract" => nil,
+       "usdFungible" => true
+     },
+    %{
+       "bep2Asset" => nil,
+       "canConvert" => true,
+       "canDeposit" => true,
+       "canWithdraw" => true,
+       "collateral" => true,
+       "collateralWeight" => 0.975,
+       "creditTo" => nil,
+       "erc20Contract" => nil,
+       "fiat" => false,
+       "hasTag" => false,
+       "hidden" => false,
+       "id" => "BTC",
+       "indexPrice" => 43037.82211361,
+       "isEtf" => false,
+       "isToken" => false,
+       "methods" => ["btc", "sol"],
+       "name" => "Bitcoin",
+       "nftQuoteCurrencyEligible" => false,
+       "splMint" => "9n4nbM75f5Ui33ZbPYXn59EwSgE8CGsHtAeTH5YFeJ9E",
+       "spotMargin" => true,
+       "trc20Contract" => nil,
+       "usdFungible" => false
+     }],
+     "success" => true
+   }}
+  """
+  def get_wallet_coins(config \\ nil) do
+    get("#{@prefix}/wallet/coins", %{}, config)
+  end
 end
