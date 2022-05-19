@@ -13,8 +13,15 @@ defmodule ExFtx.Auth do
     body = if Enum.empty?(body), do: "", else: Jason.encode!(body)
     data = "#{timestamp}#{method}#{path}#{body}"
 
-    :sha256
-    |> :crypto.hmac(api_secret, data)
-    |> Base.encode16(case: :lower)
+    # TODO: remove when we require OTP 24
+    if Code.ensure_loaded?(:crypto) and function_exported?(:crypto, :mac, 4) do
+      :hmac
+      |> :crypto.mac(:sha256, api_secret, data)
+      |> Base.encode16(case: :lower)
+    else
+      :sha256
+      |> :crypto.hmac(api_secret, data)
+      |> Base.encode16(case: :lower)
+    end
   end
 end
